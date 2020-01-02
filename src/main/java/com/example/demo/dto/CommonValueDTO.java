@@ -2,8 +2,12 @@ package com.example.demo.dto;
 
 import lombok.Data;
 
+/**
+ * @author ananight
+ * @date 2020/1/2
+ */
 @Data
-public class CommonReponseDTO {
+public class CommonValueDTO {
 
     private String value1;
 
