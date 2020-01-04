@@ -1,8 +1,13 @@
 server:
   port: 2059
+
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/blackboard01?useUnicode=true&useSSL=false&charcterEncoding=UTF-8&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/blackboard01?useUnicode=true&useSSL=false&charcterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
     username: blackboard01
     password: 123456
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.example.demo.dto

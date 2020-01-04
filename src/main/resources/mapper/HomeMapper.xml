@@ -1,0 +1,18 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.HomeMapper">
+    <resultMap id="home_base_result" type="com.example.demo.dto.HomeContentDTO">
+        <result column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="date" jdbcType="VARCHAR" property="date"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="author" jdbcType="VARCHAR" property="author"/>
+    </resultMap>
+
+    <select id="selectAllContents" resultMap="home_base_result">
+        select *
+        from home_page
+        where enabled is true
+    </select>
+
+</mapper>

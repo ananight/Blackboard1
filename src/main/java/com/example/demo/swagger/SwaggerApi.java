@@ -36,7 +36,7 @@ public class SwaggerApi {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("Spring Boot 使用Swagger2 构建RESTful API")
-                .contact(new Contact("ananight", "-----", ""))
+                .contact(new Contact("ananight", "www.baidu.com", ""))
                 .version("1.0")
                 .description("blackboard01 API 描述")
                 .build();

@@ -1,7 +1,12 @@
 package com.example.demo.service.impl;
 
+import com.example.demo.dto.HomeContentDTO;
+import com.example.demo.mapper.HomeMapper;
 import com.example.demo.service.HomeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author ananight
@@ -10,9 +15,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class HomeServiceImpl implements HomeService {
 
+    @Autowired
+    private HomeMapper homeMapper;
+
     @Override
-    public String homePageInfo() {
-        return "home page info";
+    public List<HomeContentDTO> homePageInfo() {
+        return homeMapper.selectAllContents();
     }
 
 }
